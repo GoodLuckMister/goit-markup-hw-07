@@ -7,8 +7,7 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: center;
+    @extend %display-center;
   }
 
   &__item:not(:last-child) {
@@ -27,7 +26,7 @@
     cursor: pointer;
     border: none;
     outline: 0;
-    transition: background $time $cubic, color $time $cubic;
+    transition: background-color $time $cubic, color $time $cubic;
     &:hover,
     &:focus {
       background-color: getColor("hover");
