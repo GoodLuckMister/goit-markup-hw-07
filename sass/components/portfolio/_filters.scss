@@ -1,0 +1,37 @@
+.filter-box {
+  padding-top: 94px;
+  padding-bottom: 50px;
+
+  &__title {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    display: block;
+    padding: 6px 22px;
+    background-color: getColor("background-color");
+    color: getColor("text");
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    transition: background $time $cubic, color $time $cubic;
+    &:hover,
+    &:focus {
+      background-color: getColor("hover");
+      color: getColor("background");
+    }
+  }
+}
